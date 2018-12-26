@@ -9,7 +9,9 @@ RUN curl -SL http://www.openfst.org/twiki/pub/FST/FstDownload/openfst-1.6.9.tar.
 WORKDIR /root/openfst-1.6.9
 RUN ./configure \
         --enable-static=yes \
-        --enable-far 
+        --enable-far=true \
+        --enable-pdt=true \
+        --enable-mpdt=true
 RUN make && make install
 RUN curl -SL http://www.openfst.org/twiki/pub/GRM/ThraxDownload/thrax-1.2.7.tar.gz \
     | tar -xzC /root/
