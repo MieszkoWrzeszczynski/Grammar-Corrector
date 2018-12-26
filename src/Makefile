@@ -1,4 +1,4 @@
-bin/corrector.far: corrector.grm Dictionaries/small.txt
+bin/corrector.far: corrector.grm Dictionaries/polimorfNorm.txt
 	thraxcompiler --input_grammar=$< --output_far=$@
 
 clean:
