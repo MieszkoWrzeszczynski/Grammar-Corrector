@@ -11,8 +11,8 @@ PL_toLowerCase = Optimize[(("A":"a") | ("B":"b" | ("CH":"ch")) | ("C":"c") | ("D
 PL_upperError = Optimize[PL_errors @ PL_toUpperCase];
 PL_upperTypos = Optimize[PL_typos @ PL_toUpperCase];
 
-#export dict = Optimize[StringFile['./Dictionaries/polimorfNorm.txt']];
-export dict = Optimize[StringFile['./Dictionaries/small.txt']];
+export dict = Optimize[StringFile['./Dictionaries/polimorfNorm.txt']];
+#export dict = Optimize[StringFile['./Dictionaries/small.txt']];
 
 #export errormaker = dict @ ((letter|err)+) ;
 export errormaker = Optimize[dict @ ((PL_letters|PL_upperError|PL_errors|PL_typos|PL_upperTypos|PL_toUpperCase|PL_toLowerCase)+)];
