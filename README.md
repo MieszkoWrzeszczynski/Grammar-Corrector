@@ -6,5 +6,5 @@ docker build -t thrax .
 
 
 ### Available flags
---f -> Use frequency dictionary
---i -> Use interactive mode (First the best match will be applicated as the answer)
+* --f -> Use frequency dictionary
+* --i -> Use interactive mode (First the best match will be applicated as the answer)
